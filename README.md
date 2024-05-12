@@ -3,7 +3,7 @@ A simple contract with 2-3 functions showcasing the values of those functions in
 
 ## Description
 
-Solidity contracts are like digital agreements that run on blockchain networks. They include rules around transactions, the creation of tokens, and other contract interactions. They are used in building, creating tokens, ensuring security, and tracking activities utilizing events. Security and gas usage are some of the other important factors to be observed by developers for keeping costs lower.
+This simple contract would come with 2-3 functions that prove their values at the application's front end. The functions might include funds depositing, viewing a balance within an account, and withdrawing money. The application's front end would show the current balance, allow users to be able to make a deposit and update the balance after the activity. 
 
 ## Usage/Features
 
