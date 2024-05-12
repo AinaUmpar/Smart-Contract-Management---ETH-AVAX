@@ -27,12 +27,14 @@ This simple contract would come with 2-3 functions that prove their values at th
 
 *make sure that the balance is changing when depositing and withdrawing, if you see it change then it means that the transaction is successful.
 
+## Template
+Template used by Metacrafters Chris (https://github.com/MetacrafterChris/SCM-Starter.git)
+
 ## Authors
 
 Aina A. Umpar
 email : 8215192@ntc.edu.ph
 Discord : AinaUmpar1732
-
 
 ## License
 
