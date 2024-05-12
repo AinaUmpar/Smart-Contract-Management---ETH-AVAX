@@ -7,12 +7,10 @@ This simple contract would come with 2-3 functions that prove their values at th
 
 ## Usage/Features
 
-1. Interact with MetaMask wallet for user authentication and transaction signing. 
-2. Allow the processing of transactions such as deposits and withdrawals using funds from the MetaMask wallet.
-3. Get user account info from MetaMask for a personalized experience
-4. Prompt users to connect their MetaMask wallet if not already connected.
-5. Support upgradability to change the logic of the contract without breaking its functionality.
-6. Optimize gas usage to reduce transaction costs.
+1. Authenticate users and sign transactions via the MetaMask wallet. 
+2. Enable transactions such as deposits and withdrawals to be made by using funds from the MetaMask wallet. 
+3. Personalized experience will be experienced as user account info is retrieved from MetaMask. 
+4. Allowing upgradability to change the logic of the contract without breaking the functionality. 
 
 ### Executing program
 
