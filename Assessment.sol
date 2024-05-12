@@ -1,60 +1,58 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.9;
 
-//import "hardhat/console.sol";
 
 contract Assessment {
     address payable public admin;
-    uint256 public balance;
+    uint256 public fund;
 
     event Deposit(uint256 amount);
     event Withdraw(uint256 amount);
 
-    constructor(uint initBalance) payable {
+    constructor(uint initfund) payable {
         admin = payable(msg.sender);
-        balance = initBalance;
+        fund = initfund;
     }
 
-    function getBalance() public view returns(uint256){
-        return balance;
+    function getfund() public view returns(uint256){
+        return fund;
     }
 
     function deposit(uint256 _amount) public payable {
-        uint _previousBalance = balance;
+        uint _previousfund = fund;
 
-        // make sure this is the owner
+        
         require(msg.sender == admin, "You are not the owner of this account");
 
-        // perform transaction
-        balance += _amount;
+        
+        fund += _amount;
 
-        // assert transaction completed successfully
-        assert(balance == _previousBalance + _amount);
+        
+        assert(fund == _previousfund + _amount);
 
-        // emit the event
+        
         emit Deposit(_amount);
     }
 
-    // custom error
-    error InsufficientBalance(uint256 balance, uint256 withdrawAmount);
+    
+    error InsufficientBalance(uint256 fund, uint256 withdrawAmount);
 
     function withdraw(uint256 _withdrawAmount) public {
         require(msg.sender == admin, "You are not the owner of this account");
-        uint _previousBalance = balance;
-        if (balance < _withdrawAmount) {
+        uint _previousBalance = fund;
+        if (fund < _withdrawAmount) {
             revert InsufficientBalance({
-                balance: balance,
+                fund: fund,
                 withdrawAmount: _withdrawAmount
             });
         }
 
-        // withdraw the given amount
-        balance -= _withdrawAmount;
+        
+        fund -= _withdrawAmount;
 
-        // assert the balance is correct
-        assert(balance == (_previousBalance - _withdrawAmount));
+        
+        assert(fund == (_previousfund - _withdrawAmount));
 
-        // emit the event
         emit Withdraw(_withdrawAmount);
     }
 }
